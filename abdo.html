@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>projet1</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="font-family: serif ">
+    <!-- xs sm md lg-->
+    
+    <nav
+    id="navbar"
+    class="navbar navbar-expand-lg navbar-light col-12 "
+    style="background-color: rgb(56, 56, 56);"
+  >
+    <a
+      class="navbar-brand"
+     
+    ><img  style="width: 110px; margin: -25px;  height: 45px;" src="res/6.png" alt=""></a>
+    <button
+      style="background-color: rgb(56, 56, 56);"
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      style="background-color: rgb(56, 56, 56);"
+      class="collapse navbar-collapse"
+      id="navbarNavDropdown"
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            type="submit"
+            onclick="nouveau()"
+            style="color: white;background-color: rgb(56, 56, 56);"
+            >Nouveauté <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li id="exercices" style="display: flex;" class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+           type="submit"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="color: white;background-color: rgb(56, 56, 56);"
+          >
+            Exercices
+          </a>
+          <div
+          type="submit"
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownMenuLink"
+            style="color: white;background-color: rgb(56, 56, 56);"
+          >
+            <a
+              style="color: white;background-color: rgb(56, 56, 56);"
+              class="dropdown-item"
+              onclick="abdo()"
+              >Abdo</a
+            >
+            <a
+              style="color: white;background-color: rgb(56, 56, 56);"
+              class="dropdown-item"
+              onclick="av()"
+              >Avant bras</a
+            >
+            <a
+              style="color: white;background-color: rgb(56, 56, 56);"
+              class="dropdown-item"
+              onclick="bi()"
+              >biceps</a
+            >
+            <a
+            style="color: white;background-color: rgb(56, 56, 56);"
+            class="dropdown-item"
+            onclick="dos()"
+            >Dos</a
+          >
+          <a
+          style="color: white;background-color: rgb(56, 56, 56);"
+          class="dropdown-item"
+         onclick="ep()"
+          >Epaules</a
+        >
+        <a
+        style="color: white;background-color: rgb(56, 56, 56);"
+        class="dropdown-item"
+        onclick="jambe()"
+        >Jambes</a
+      >
+      <a
+      style="color: white;background-color: rgb(56, 56, 56);"
+      class="dropdown-item"
+      onclick="pec()"
+      >Pectoraux</a
+    >
+    <a
+    style="color: white;background-color: rgb(56, 56, 56);"
+    class="dropdown-item"
+    onclick="tri()"
+    >Triceps</a
+  >
+          </div>
+        </li>
+       
+        
+          <li id="exercices" style="display: flex;" class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+             type="submit"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              style="color: white;background-color: rgb(56, 56, 56);"
+            >
+              calculez votre IMC/IMG
+            </a>
+            <div
+            type="submit"
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="color: white;background-color: rgb(56, 56, 56);"
+            >
+            <a
+            style="color: white;background-color: rgb(56, 56, 56);"
+            class="dropdown-item"
+            onclick="IMC()"
+            >IMC/IMG</a
+          >
+         
+              <a
+              style="color: white;background-color: rgb(56, 56, 56);"
+              class="dropdown-item"
+              onclick="hyst()"
+              >historique</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              style="color: white;background-color: rgb(56, 56, 56);"
+              type="submit"
+              onclick="prix()"
+              >Abonnement</a
+            >
+          </li>
+          
+         
+          <li class="nav-item">
+              <a
+                class="nav-link"
+                style="color: white;background-color: rgb(56, 56, 56);"
+                type="submit"
+                onclick="carte()"
+                >Contact</a
+              >
+            </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="abdo" class="container-fluid row" style="background-image: url(res/nouveau.jpg)  ;background-blend-mode: lighten;  background-attachment: fixed; background-repeat: no-repeat;margin-left: 0;  background-size: cover; min-height: 601.5px;">
+    <div class="fixed-bottom col-12" style="border-style: none;display: flex; justify-content: flex-end;"   onmouseover="mouve()" onmouseout="static()">
+      <a  href="#navbar" style="text-decoration: none; display: flex; justify-content: flex-end;">
+        <img id="gif" style=" height: 50px; width: auto;border-style: none; " src="res/top3.png" >
+      </a> 
+    </div>    
+     
+    <div class="col-lg-4 col-sm-6 col-12 exerc"  style="background-color: white;"><img src="res/exercice/abdo/abdo1.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo2.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo3.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo4.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo5.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo6.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo7.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo8.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo9.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo10.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo11.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo12.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo13.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo14.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo15.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo16.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo17.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo18.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo19.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo20.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo21.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo22.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo23.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo24.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo25.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo26.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo27.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo28.png" ></div>
+    <div class="col-lg-4 col-sm-6 col-12 exerc " style="background-color: white;"><img src="res/exercice/abdo/abdo29.png" ></div>
+   </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+<script src="js/main.js"></script>
+</html>
